@@ -6,6 +6,13 @@
 */
 {
   "files": [],
+  "compileOnSave": true,
+  "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types",
+      "src/typings.d.ts"
+    ]
+  },
   "references": [
     {
       "path": "./tsconfig.app.json"
