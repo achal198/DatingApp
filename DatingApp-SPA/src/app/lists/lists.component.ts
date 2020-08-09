@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lists.component.css']
 })
 export class ListsComponent implements OnInit {
-
+  achal: any ='';
   constructor() { }
 
   ngOnInit() {
+    this.achal = 'Achal Parashar';
   }
 
 }

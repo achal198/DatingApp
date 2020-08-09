@@ -14,17 +14,15 @@ export const appRoutes: Routes = [
     children: [
       {
         path: 'members',
-        component: MemberListComponent,
-        canActivate: [AuthGuard],
+        component: MemberListComponent
       },
       {
         path: 'messages',
-        component: MessagesComponent,
-        canActivate: [AuthGuard],
+        component: MessagesComponent
       },
       {
         path: 'lists',
-        component: ListsComponent,
+        component: ListsComponent
       },
     ],
   },
