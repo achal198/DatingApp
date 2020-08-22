@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { MemberListComponent } from './member-list/member-list.component';
+import { MemberListComponent } from './member/member-list/member-list.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HomeComponent } from './home/home.component';
