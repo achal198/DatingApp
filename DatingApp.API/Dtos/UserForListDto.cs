@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace DatingApp.API.Dtos
 {
@@ -7,7 +8,7 @@ namespace DatingApp.API.Dtos
         public int Id { get; set; }
         public string Username { get; set; }
         public string Gender { get; set; }
-        public DateTime Age { get; set; }
+        public int Age { get; set; }
         public string KnownAs { get; set; }
         public DateTime Created { get; set; }
         public DateTime LastActive { get; set; }
@@ -17,5 +18,6 @@ namespace DatingApp.API.Dtos
         public string City { get; set; }
         public string Country { get; set; }
         public string PhotoUrl { get; set; }
+        public ICollection<PhotosForDetailDto> Photos { get; set; }
     }
 }
