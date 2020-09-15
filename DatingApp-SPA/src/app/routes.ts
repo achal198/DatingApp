@@ -4,6 +4,9 @@ import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { MemberDetailComponent } from './member/member-detail/member-detail.component';
+import { MemberDetailResolver } from './_resolver/member-detail-resolver';
+import { MemberListResolver } from './_resolver/member-list-resolver';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,7 +17,13 @@ export const appRoutes: Routes = [
     children: [
       {
         path: 'members',
-        component: MemberListComponent
+        component: MemberListComponent,
+        resolve: {users: MemberListResolver}
+      },
+      {
+        path: 'members/:id',
+        component: MemberDetailComponent,
+        resolve: {user: MemberDetailResolver}
       },
       {
         path: 'messages',
