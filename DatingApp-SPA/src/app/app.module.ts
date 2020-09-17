@@ -17,6 +17,7 @@ import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { MemberListComponent } from './member/member-list/member-list.component';
 import { MemberCardComponent } from './member/member-card/member-card.component';
+import { MemberEditComponent } from './member/member-edit/member-edit.component';
 import { MemberDetailComponent } from './member/member-detail/member-detail.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -24,6 +25,7 @@ import { MemberDetailResolver } from './_resolver/member-detail-resolver';
 import { AlertifyService } from './_services/alertify.service';
 import { UserService } from './_services/user.service';
 import { MemberListResolver } from './_resolver/member-list-resolver';
+import { MemberEditResolver } from './_resolver/member-edit-resolver';
 
 export function tokenGetter(): string {
   return localStorage.getItem('token');
@@ -39,7 +41,8 @@ export function tokenGetter(): string {
     ListsComponent,
     MessagesComponent,
     MemberCardComponent,
-    MemberDetailComponent
+    MemberDetailComponent,
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ export function tokenGetter(): string {
     AlertifyService,
     UserService,
     MemberDetailResolver,
-    MemberListResolver
+    MemberListResolver,
+    MemberEditResolver
     ],
   bootstrap: [AppComponent],
 })
